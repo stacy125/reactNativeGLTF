@@ -1,5 +1,5 @@
 {
-  "name": "three3d",
+  "name": "awesomear",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
@@ -12,15 +12,17 @@
   "dependencies": {
     "@react-three/fiber": "^8.0.27",
     "expo": "~45.0.0",
-    "expo-asset": "~8.5.0",
-    "expo-gl": "~11.3.0",
+    "expo-asset": "^8.5.0",
+    "expo-gl": "^11.3.0",
+    "expo-graphics": "^2.0.0",
     "expo-status-bar": "~1.3.0",
     "expo-three": "^6.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-native": "0.68.2",
     "react-native-web": "0.17.7",
-    "three.js": "^0.77.1"
+    "react-promise-suspense": "^0.3.3",
+    "three": "^0.142.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

@@ -15,9 +15,9 @@ const App = () => {
 
   // Create an Asset from a resource
 
-
+  
   // await asset.downloadAsync();
-
+  
   // This is the local URI
   // const uri = asset.localUri;
   const getUrl = async () => {
@@ -27,7 +27,7 @@ const App = () => {
     return asset.localUri;
   };
 
-  useEffect(async () => {
+  useEffect ( async () => {
     const url = await getUrl();
     console.log(url, 'url');
   }, [])
@@ -45,7 +45,7 @@ const App = () => {
     const material = new MeshBasicMaterial({ color: 'blue' });
     const cube = new Mesh(geometry, material);
     scene.add(cube);
-
+    
     let loadedModel;
     const loader = new GLTFLoader();
     loader.load('./assets/femaleDancer.glb', function (glb) {
@@ -57,16 +57,16 @@ const App = () => {
       scene.add(glb.scene)
       // .scale.set(0.3, 0.3, 0.3);
 
-      //   render();
-
-      // },
+    //   render();
+     
+    // },
       // called while loading is progressing
-      //   function (xhr) {
+    //   function (xhr) {
 
-      //     console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+    //     console.log((xhr.loaded / xhr.total * 100) + '% loaded');
 
-      //   }, undefined, function (error) {
-      //   console.error(error);
+    //   }, undefined, function (error) {
+    //   console.error(error);
     });
 
     camera.position.z = 10;
@@ -80,10 +80,10 @@ const App = () => {
       requestAnimationFrame(animate);
     };
     animate();
-
+  
 
     const render = () => {
-
+      
       requestAnimationFrame(render);
       cube.rotation.x += 0.01;
       cube.rotation.y += 0.01;
@@ -94,9 +94,9 @@ const App = () => {
   }
 
   return (
-    <View style={{ flex: 1, margin: 100 }}>
+    <View style={{ flex: 1, margin: 100}}>
       <Text>Hello</Text>
-      <GLView
+      <GLView  
         onContextCreate={onContextCreate}
         style={{ flex: 1, width: 400, height: 400 }}
       />
